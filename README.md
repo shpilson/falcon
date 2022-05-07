@@ -1,2 +1,2 @@
-# TEC-FALCON LANDING PAGE
+# 'Falcon' landing page
 Landing page for logistic company «‎FALCON»
