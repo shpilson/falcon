@@ -53,8 +53,8 @@
                                 <div class="header__phone">
                                     8 (495) 120-14-03
                                 </div>
-                                <a class="header__callback" href="#">
-                                    <div class="header__callme header__text title">Перезвоните мне</div>
+                                <a class="header__callback" href="#modal__window">
+                                    <div class="header__callme header__text">Перезвоните мне</div>
                                 </a>
                             </div>
                         </div>
@@ -98,10 +98,11 @@
                                 Мы доставим Ваш груз быстро,
                                 качественно и безопасно
                             </h3>
-
-                            <button class="header__content-button">
-                                Узнать подробнее
-                            </button>
+                            <form action="#modal__window">
+                                <button class="header__content-button">
+                                    Узнать подробнее
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -118,7 +119,7 @@
 
                 <div class="about__consultation">
                     <div class="consultation__box">
-                        <h2 class="consultation__title title">
+                        <h2 class="consultation__title">
                             Бесплатная консультация
                         </h2>
                         <div class="consultation__content">
@@ -165,10 +166,10 @@
         <!-- Блок: "Наши услуги" -->
 
         <section class="services" id="services">
+            <h2 class="title">Наши услуги</h2>
             <div class="container">
-                <h2 class="title">Наши услуги</h2>
 
-                <div class="services__box">
+                <div class="services__box-row1">
                     <div class="services__item">
                         <h3 class="services__item-title">Вертолётные перевозки</h3>
                         <img class="services__img" src="/img/icons/helicopter.svg" alt="Helicopter">
@@ -183,7 +184,9 @@
                         <h3 class="services__item-title">Автоперевозки</h3>
                         <img class="services__img" src="/img/icons/truck.svg" alt="Truck">
                     </div>
+                </div>
 
+                <div class="services__box-row2">
                     <div class="services__item">
                         <h3 class="services__item-title">Морские и речные перевозки грузов</h3>
                         <img class="services__img" src="/img/icons/ship.svg" alt="Ship">
@@ -200,70 +203,70 @@
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Блок: "Почему мы?" -->
+            <!-- Блок: "Почему мы?" -->
 
-        <section class="advantages" id="advantages">
-            <div class="container">
+            <section class="advantages" id="advantages">
                 <h2 class="title">Почему мы?</h2>
-                <div class="advantages__box">
-                    <div class="advantages__item">
-                        <h2 class="advantages__title">Круглосуточный приём заявок</h2>
-                        <div class="advantages__circle">1</div>
-                        <div class="advantages__subscription">
-                            Не оставим без поддержки,
-                            на связи с Вами 24/7
+                <div class="container">
+                    <div class="advantages__box">
+                        <div class="advantages__item advantages__item--support">
+                            <h2 class="advantages__title">Круглосуточный приём заявок</h2>
+                            <div class="advantages__circle">1</div>
+                            <div class="advantages__subscription">
+                                Не оставим без поддержки,
+                                на связи с Вами 24/7
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="advantages__item">
-                        <h2 class="advantages__title">Квалифицированные сотрудники</h2>
-                        <div class="advantages__circle">2</div>
-                        <div class="advantages__subscription">
-                            Наши сотрудники регулярно
-                            повышают квалификацию
+                        <div class="advantages__item advantages__item--quality">
+                            <h2 class="advantages__title">Квалифицированные сотрудники</h2>
+                            <div class="advantages__circle">2</div>
+                            <div class="advantages__subscription">
+                                Наши сотрудники регулярно
+                                повышают квалификацию
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="advantages__item">
-                        <h2 class="advantages__title">Современный транспорт</h2>
-                        <div class="advantages__circle">3</div>
-                        <div class="advantages__subscription">
-                            Новый транспорт
-                            с отличным обслуживанием
+                        <div class="advantages__item advantages__item--transport">
+                            <h2 class="advantages__title">Современный транспорт</h2>
+                            <div class="advantages__circle">3</div>
+                            <div class="advantages__subscription">
+                                Новый транспорт
+                                с отличным обслуживанием
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Блок: "Наша команда" -->
+            <!-- Блок: "Наша команда" -->
 
-        <section class="team" id="team">
-            <div class="container">
+            <section class="team" id="team">
                 <h2 class="title">Наша команда</h2>
+                <div class="container">
 
-                <div class="team__box">
-                    <div class="team__item">
-                        <img class="team__avatar" src="/img/member1.svg" alt="Member of team">
-                        <div class="team__subtitle">Дмитрий Олегович</div>
-                    </div>
+                    <div class="team__box">
+                        <div class="team__item">
+                            <img class="team__avatar" src="/img/member1.svg" alt="Member of team">
+                            <div class="team__subtitle">Дмитрий Олегович</div>
+                        </div>
 
-                    <div class="team__item">
-                        <img class="team__avatar" src="/img/member2.svg" alt="Member of team">
-                        <div class="team__subtitle">Екатерина Георгиевна</div>
-                    </div>
+                        <div class="team__item">
+                            <img class="team__avatar" src="/img/member2.svg" alt="Member of team">
+                            <div class="team__subtitle">Екатерина Георгиевна</div>
+                        </div>
 
-                    <div class="team__item">
-                        <img class="team__avatar" src="/img/member3.svg" alt="Member of team">
-                        <div class="team__subtitle">Сергей Викторович</div>
+                        <div class="team__item">
+                            <img class="team__avatar" src="/img/member3.svg" alt="Member of team">
+                            <div class="team__subtitle">Сергей Викторович</div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="team__quotes">
                     <div class="team__quote">
-                        «Всегда выбирайте самый трудный путь
+                        «Всегда выбирайте самый трудный путь,
                         на нём Вы не встретите конкурентов»
                     </div>
 
@@ -281,81 +284,83 @@
                 <div class="team__banner">
                     <img class="team__img" src="/img/team.jpg" alt="Whole team">
                 </div>
-            </div>
-        </section>
+            </section>
 
 
-        <!-- Блок: "Отзывы" -->
+            <!-- Блок: "Отзывы" -->
 
-        <section class="reviews" id="reviews">
-            <div class="container">
-                <h2 class="reviews__title title">Отзывы</h2>
-                <div class="reviews__box">
-                    <div class="reviews__item">
-                        <div class="reviews__subtitle subtitle">Ирина</div>
-                        <div class="reviews__date">24.03.2021</div>
-                        <div class="reviews__text">Обращение к вам за помощью в переезде оставило только положительные
-                            впечатления. Хотелось отметить замечательного водителя газели Сергея. Проявил себя как
-                            компетентный
-                            и профессиональный сотрудник.</div>
-                    </div>
-                    <div class="reviews__item reviews__item--active">
-                        <div class="reviews__subtitle subtitle">Светлана Васильевна</div>
-                        <div class="reviews__date">13.09.2020</div>
-                        <div class="reviews__text">Сегодня (13.09.2019) мы переехали. Остались очень довольны,
-                            несмотря на то, что к нам опоздали на 1,5 часа.
-                            Водитель заранее позвонил, предупредил, что задерживается.</div>
-                    </div>
-                    <div class="reviews__item">
-                        <div class="reviews__subtitle subtitle">Ольга Петровна</div>
-                        <div class="reviews__date">11.11.2021</div>
-                        <div class="reviews__text">Могу на 100% порекомендовать компанию ФАЛКОН и отметить, что цены
-                            фиксированы, что упрощает расчет.
-                            Упаковали все качественно и быстро. Все вещи приехали в сохранности. </div>
+            <section class="reviews" id="reviews">
+                <h2 class="reviews__title title--white">Отзывы</h2>
+                <div class="container">
+                    <div class="reviews__box">
+                        <div class="reviews__item">
+                            <div class="reviews__subtitle subtitle">Ирина</div>
+                            <div class="reviews__date">24.03.2021</div>
+                            <div class="reviews__text">Обращение к вам за помощью в переезде оставило только
+                                положительные
+                                впечатления. Хотелось отметить замечательного водителя газели Сергея. Проявил себя как
+                                компетентный
+                                и профессиональный сотрудник.</div>
+                        </div>
+                        <div class="reviews__item reviews__item--active">
+                            <div class="reviews__subtitle subtitle">Светлана Васильевна</div>
+                            <div class="reviews__date">13.09.2020</div>
+                            <div class="reviews__text">Сегодня (13.09.2019) мы переехали. Остались очень довольны,
+                                несмотря на то, что к нам опоздали на 1,5 часа.
+                                Водитель заранее позвонил, предупредил, что задерживается.</div>
+                        </div>
+                        <div class="reviews__item">
+                            <div class="reviews__subtitle subtitle">Ольга Петровна</div>
+                            <div class="reviews__date">11.11.2021</div>
+                            <div class="reviews__text">Могу на 100% порекомендовать компанию ФАЛКОН и отметить, что цены
+                                фиксированы, что упрощает расчет.
+                                Упаковали все качественно и быстро. Все вещи приехали в сохранности. </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Блок: "Обратный звонок" -->
+            <!-- Блок: "Обратный звонок" -->
 
-        <section class="callback" id="callback">
-            <div class="container">
+            <section class="callback" id="callback">
                 <div class="callback__box">
-                    <h2 class="callback__title title">Закажи переезд прямо сейчас</h2>
-                    <div class="callback__text">Мы перезвоним в течении 10 секунд</div>
-                    <div class="callback__content">
-                        <form class="callback__form" action="#modal__window">
-                            <input class="callback__form-input" type="text" placeholder="Ваше имя">
-                            <input class="callback__form-input" type="text" placeholder="Телефон">
-                            <button class="callback__button">Перезвоните мне</button>
-                        </form>
+                    <div class="container">
+                        <h2 class="callback__title">Бесплатная консультация для Вас</h2>
+                        <div class="callback__text">Мы перезвоним для обсуждения деталей</div>
+                        <div class="callback__content">
+                            <form class="callback__form" action="#">
+                                <input class="callback__form-input" type="text" placeholder="Ваше имя">
+                                <input class="callback__form-input" type="text" placeholder="Телефон">
+                                <button class="callback__button">Перезвоните мне</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Блок: "Лицензии" -->
+            <!-- Блок: "Лицензии" -->
 
-        <section class="licenses" id="licenses">
-            <div class="container">
+            <section class="licenses" id="licenses">
                 <h2 class="licenses__title title">Лицензии</h2>
-                <div class="licenses__box">
-                    <img class="licenses__img" src="/img/licenses/1.jpg" alt="License">
-                    <img class="licenses__img" src="/img/licenses/1.jpg" alt="License">
-                    <img class="licenses__img" src="/img/licenses/1.jpg" alt="License">
-                    <img class="licenses__img" src="/img/licenses/1.jpg" alt="License">
+                <div class="container">
+                    <div class="licenses__box">
+                        <img class="licenses__img" src="/img/licenses/1.jpg" alt="License">
+                        <img class="licenses__img" src="/img/licenses/1.jpg" alt="License">
+                        <img class="licenses__img" src="/img/licenses/1.jpg" alt="License">
+                        <img class="licenses__img" src="/img/licenses/1.jpg" alt="License">
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Блок: "Контакты" -->
+            <!-- Блок: "Контакты" -->
 
-        <section class="contacts" id="contacts">
-            <div class="container">
-                <div class="contacts__subscription">
-                    Вы можете связаться с нами в любое удобное
-                    время любым удобным для Вас способом
+            <section class="contacts" id="contacts">
+                <h2 class="contacts__title title">Наши контакты</h2>
+                <div class="container">
+                    <div class="contacts__subscription">
+                        Вы можете связаться с нами в любое удобное
+                        время любым удобным для Вас способом
+                    </div>
                 </div>
 
                 <div class="contacts__map">
@@ -365,11 +370,11 @@
                         <div class="loader loader-default"></div>
                         <div id="map-yandex"></div>
                     </div>
-
                 </div>
+
                 <div class="contacts__box">
                     <div class="logo">
-                        <h2 class="contacts__title title">Мы ждём Вас</h2>
+                        <h2 class="contacts__box-title">Мы ждём Вас</h2>
                     </div>
                     <ul class="contacts__list">
                         <li class="contacts__list-item">Люберцы, Октябрьский 112</li>
@@ -378,63 +383,93 @@
                             info@tec-falcon.ru</li>
                     </ul>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Footer / Подвал -->
-        <footer class="footer">
-            <div class="container">
-                <div class="footer__content">
-                    <div class="footer__policy">
-                        <div class="footer__logo logo">
-                            <a class="logo__link" href="#">
-                                <div class="footer__title title">ООО ТЭК «ФАЛКОН»</div>
-                            </a>
+            <!-- Footer / Подвал -->
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__content">
+                        <div class="footer__policy">
+                            <div class="footer__logo logo">
+                                <a class="logo__link" href="#">
+                                    <div class="footer__title">ООО ТЭК «ФАЛКОН»</div>
+                                </a>
+                            </div>
+                            <div class="footer__policy-inner">
+                                <a class="footer__link" href="#">Политика конфиденциальнности</a>
+                                <a class="footer__link" href="#">Соглашение на обработку персональных данных</a>
+                            </div>
                         </div>
-                        <div class="footer__policy-inner">
-                            <a class="footer__link" href="#">Политика конфиденциальнности</a>
-                            <a class="footer__link" href="#">Соглашение на обработку персональных данных</a>
-                        </div>
-                    </div>
 
-                    <div class="footer__navigation">
-                        <div class="footer__navigation-inner">
-                            <nav class="footer__menu">
-                                <ul class="footer__menu-list">
-                                    <li class="footer__menu-list-item">
-                                        <a class="footer__menu-link" href="#about">О нас</a>
-                                    </li>
-                                    <li class="footer__menu-list-item">
-                                        <a class="footer__menu-link" href="#services">Наши услуги</a>
-                                    </li>
-                                    <li class="footer__menu-list-item">
-                                        <a class="footer__menu-link" href="#advantages">Почему мы?</a>
-                                    </li>
-                                    <li class="footer__menu-list-item">
-                                        <a class="footer__menu-link" href="#team">Команда</a>
-                                    </li>
-                                    <li class="footer__menu-list-item">
-                                        <a class="footer__menu-link" href="#licenses">Лицензии</a>
-                                    </li>
-                                    <li class="footer__menu-list-item">
-                                        <a class="footer__menu-link" href="#contacts">Контакты</a>
-                                    </li>
-                                </ul>
-                            </nav>
+                        <div class="footer__navigation">
+                            <div class="footer__navigation-inner">
+                                <nav class="footer__menu">
+                                    <ul class="footer__menu-list">
+                                        <li class="footer__menu-list-item">
+                                            <a class="footer__menu-link" href="#about">О нас</a>
+                                        </li>
+                                        <li class="footer__menu-list-item">
+                                            <a class="footer__menu-link" href="#services">Наши услуги</a>
+                                        </li>
+                                        <li class="footer__menu-list-item">
+                                            <a class="footer__menu-link" href="#advantages">Почему мы?</a>
+                                        </li>
+                                        <li class="footer__menu-list-item">
+                                            <a class="footer__menu-link" href="#team">Команда</a>
+                                        </li>
+                                        <li class="footer__menu-list-item">
+                                            <a class="footer__menu-link" href="#licenses">Лицензии</a>
+                                        </li>
+                                        <li class="footer__menu-list-item">
+                                            <a class="footer__menu-link" href="#contacts">Контакты</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="footer__contacts">
-                        <form action="#">
-                            <button class="footer__button button modal__link--black">Обратный звонок</button>
-                        </form>
+                        <div class="footer__contacts">
+                            <form action="#modal__window">
+                                <button class="footer__button button modal__link--black">Обратный звонок</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+            </footer>
 
     </div>
 
+    <!-- Pop-up windows / Всплывающие окна -->
+
+    <div id="modal__window">
+        <div class="modal__box">
+            <div class="modal__header">
+                <a class="close" href="#">x</a>
+                <div class="modal__title">Заказать обратный звонок</div>
+            </div>
+            <div class="modal__container" id="modal_callback">
+                <div class="modal__body">
+                    <input class="modal__form-input" type="text" placeholder="Ваше имя">
+                    <input class="modal__form-input" type="text" placeholder="Телефон">
+                    <input class="modal__form-input" type="text" placeholder="Комментарий (необязательно)">
+                    <button class="modal__button">Отправить заявку</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </section>
+
+
+
+
+
+    <script src="https://shpilson.github.io/movee/js/lazyload.js" defer></script>
+    <script src="https://shpilson.github.io/movee/js/jquery.min.js" defer></script>
+    <script src="https://shpilson.github.io/movee/js/map.js" defer></script>
+
+
+    </script>
 </body>
 
 </html>

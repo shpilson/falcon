@@ -61,9 +61,7 @@ body {
     padding-bottom: 60px;
 }
 
-.header__about {
-    width: 313px;
-}
+.header__about {}
 
 .header__text {
     font-weight: 400;
@@ -78,7 +76,7 @@ body {
 
 .header__company {
     width: 376px;
-    margin: 0 auto;
+    margin: 0 120px;
 }
 
 .header__subtitle {
@@ -103,6 +101,7 @@ body {
 .header__contacts {
     width: 195px;
     display: flex;
+    margin-left: 90px;
 }
 
 .header__icon {
@@ -118,7 +117,9 @@ body {
     color: #000000;
 }
 
-.header__callback {}
+.header__callback {
+    color: #000000;
+}
 
 .header__callme {
     padding-top: 5px;
@@ -129,7 +130,103 @@ body {
     text-decoration: underline;
 }
 
-.title {}
+.title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: #000000;
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.title:before,
+.title:after {
+    /* Обязательно указываем пустое свойство content, 
+    ** иначе псевдоэлементы не появятся на сайте */
+    content: "";
+    /* Указываем что наши линии будут строчно-блочные и 
+    ** выравнивание по высоте - по центру */
+    display: inline-block;
+    vertical-align: middle;
+    /* Задаем ширину 100% и выбираем высоту линии, 
+    ** в нашем примере она равна 4 пикселям */
+    width: 100%;
+    height: 1px;
+    /* Добавляем цвет для линии */
+    background-color: #000000;
+    /* Добавляем пседоэлемантам возможность изменить 
+    ** позицию линии, для создания отступов от текста */
+    position: relative;
+}
+
+.title:before {
+    /* Смещаем левую линию на 100% влево, чтобы линия 
+    ** встала рядом с текстом слева */
+    margin-left: -100%;
+    /* Указываем в пикселях отступ линии от текста заголовка */
+    left: -14px;
+}
+
+.title:after {
+    /* Смещаем правую линию на 100% вправо, чтобы 
+    ** линия встала рядом с текстом справа */
+    margin-right: -100%;
+    /* Указываем в пикселях отступ линии от текста заголовка */
+    right: -14px;
+}
+
+
+
+.title--white {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.title--white:before,
+.title--white:after {
+    /* Обязательно указываем пустое свойство content, 
+    ** иначе псевдоэлементы не появятся на сайте */
+    content: "";
+    /* Указываем что наши линии будут строчно-блочные и 
+    ** выравнивание по высоте - по центру */
+    display: inline-block;
+    vertical-align: middle;
+    /* Задаем ширину 100% и выбираем высоту линии, 
+    ** в нашем примере она равна 4 пикселям */
+    width: 100%;
+    height: 1px;
+    /* Добавляем цвет для линии */
+    background-color: #ffffff;
+    /* Добавляем пседоэлемантам возможность изменить 
+    ** позицию линии, для создания отступов от текста */
+    position: relative;
+}
+
+.title--white:before {
+    /* Смещаем левую линию на 100% влево, чтобы линия 
+    ** встала рядом с текстом слева */
+    margin-left: -100%;
+    /* Указываем в пикселях отступ линии от текста заголовка */
+    left: -14px;
+}
+
+.title--white:after {
+    /* Смещаем правую линию на 100% вправо, чтобы 
+    ** линия встала рядом с текстом справа */
+    margin-right: -100%;
+    /* Указываем в пикселях отступ линии от текста заголовка */
+    right: -14px;
+}
+
+
 
 .header__menu {
     padding-left: 130px;
@@ -339,142 +436,672 @@ body {
 
 .services {}
 
-.services__box {}
+.services__box-row1 {
+    display: flex;
+    flex-direction: row;
+    padding-top: 60px;
+}
 
-.services__item {}
+.services__box-row2 {
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
 
-.services__item-title {}
+.services__item {
+    width: 220px;
+    height: 220px;
+    left: 0px;
+    top: 0px;
 
-.services__img {}
+    background: #F04747;
+    margin: 0 auto;
+}
+
+.services__item-title {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: center;
+
+    color: #FFFFFF;
+    margin: 30px auto;
+}
+
+.services__img {
+    margin: 0 auto;
+}
 
 .advantages {}
 
-.advantages__box {}
+.advantages__box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 100px;
+}
 
 .advantages__item {}
 
-.advantages__title {}
+.advantages__item--support {
+    margin-top: 70px;
+    background: url("/img/support.jpg");
+    width: 342px;
+    height: 342px;
+}
 
-.advantages__circle {}
+.advantages__item--quality {
+    margin-top: 190px;
+    background: url("/img/quality.jpg");
+    width: 342px;
+    height: 342px;
+}
 
-.advantages__subscription {}
+.advantages__item--transport {
+    margin-top: 308px;
+    background: url("/img/transport.jpg");
+    width: 342px;
+    height: 342px;
+}
+
+.advantages__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #FFFFFF;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 225px;
+    margin: 0 auto;
+}
+
+.advantages__circle {
+    width: 100px;
+    height: 100px;
+    background: #F04747;
+    border-radius: 50px;
+    margin: 0 auto;
+
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 74px;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.advantages__subscription {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
+    text-align: center;
+    color: #FFFFFF;
+
+    padding-top: 30px;
+
+}
 
 .team {}
 
-.team__box {}
+.team__box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 70px;
+}
 
 .team__item {}
 
 .team__avatar {}
 
-.team__subtitle {}
+.team__subtitle {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
 
-.team__quotes {}
+    color: #303030;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
 
-.team__quote {}
+.team__quotes {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background: #F04747;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 170%;
+    align-items: flex-end;
+    text-align: center;
+
+    color: #FFFFFF;
+    padding: 30px;
+}
+
+.team__quote {
+    width: 310px;
+    margin: 0 15px;
+}
 
 .team__banner {}
 
 .team__img {}
 
-.reviews {}
+.reviews {
+    background-color: #000000;
+    color: #FFFFFF;
+}
 
-.reviews__title {}
+.reviews__title {
+    padding-top: 100px;
+    padding-bottom: 70px;
+    text-align: center;
+    color: #FFFFFF;
+}
 
-.reviews__box {}
+.reviews__box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
 
-.reviews__item {}
+.reviews__item {
+    display: flex;
+    flex-direction: column;
+    width: 323px;
+}
 
-.reviews__subtitle {}
+.reviews__date {
+    background: url("https://shpilson.github.io/movee/img/icon-stars.svg") no-repeat center center;
+    padding: 4px 0px 4px 0px;
+    margin: 0px 70px 0px 0px;
+    list-style: none;
+}
 
-.subtitle {}
+.reviews__text {
+    margin: 20px 20px 20px 0px;
+}
 
-.reviews__date {}
+.reviews__button {
+    text-align: center;
+    border: 1px solid #333333;
+    margin: 60px auto 90px;
+    cursor: pointer;
+}
 
-.reviews__text {}
+.callback__box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    background: url("/img/callback_banner.jpg");
+    background-size: 100%;
+    height: 253px;
+    color: #FFF;
+}
 
-.reviews__item--active {}
+.callback__form {
+    margin: 50px 0px 0px 0px;
+}
 
-.callback {}
+.callback__form-input {
+    color: rgba(255, 255, 255, 0.7);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+    border: none;
+    border-bottom: 1px solid #333333;
+    margin: 0px 70px 0px 0px;
+    background-color: transparent;
+}
 
-.callback__box {}
+.callback__button {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #F2F2F2;
+    background: #FF352B;
+    width: 260px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+}
 
-.callback__title {}
+.callback__button:hover {
+    background: #FF4C43;
+    -moz-box-shadow: 0 0 20px #FF4C43;
+    -webkit-box-shadow: 0 0 20px #FF4C43;
+    box-shadow: 0 0 20px #FF4C43;
+}
 
-.callback__text {}
-
-.callback__content {}
-
-.callback__form {}
-
-.callback__form-input {}
-
-.callback__button {}
-
-.licenses {}
+.licenses {
+    padding-top: 100px;
+}
 
 .licenses__title {}
 
-.licenses__box {}
+.licenses__box {
+    display: flex;
+    flex-direction: row;
+    padding-top: 150px;
+    padding-bottom: 270px;
+    justify-content: space-evenly;
+}
 
 .licenses__img {}
 
-.contacts {}
+.contacts {
+    position: relative;
+    width: 100%;
+    height: 666px;
+}
 
-.contacts__subscription {}
+.contacts__title {
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 33px;
+    color: #000000;
+    margin: 40px 0px 0px 35px;
+}
 
-.contacts__map {}
+.contacts__subscription {
+    padding-top: 60px;
+    padding-bottom: 60px;
 
-.ymap-container {}
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
 
-.loader {}
+    color: #000000;
 
-.loader-default {}
+    width: 650px;
+    margin: 0 auto;
+}
 
-.contacts__box {}
+.contacts__map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
 
-.logo {}
+/* Оптимизация карты */
 
-.contacts__title {}
+/* Блок-обертка;, где мы задаем фоновое изображение скриншотом как на карте */
 
-.contacts__list {}
+.ymap-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: url('https://shpilson.github.io/movee/img/map-min.webp') #ffffff no-repeat;
+    background-position: center center;
+    background-size: cover;
+    box-shadow: 0 0 2em 0 rgba(0, 0, 0, .2);
+}
 
-.contacts__list-item {}
+/* Блок, в котором появится Яндекс.Карта */
 
-.contacts__list-item--underline {}
+#map-yandex {
+    position: relative;
+    z-index: 7;
+    width: 100%;
+    height: 555px;
+    cursor: pointer;
+    background-color: transparent;
+}
 
-.footer {}
+/* Индикатор загрузки, который показывается до загрузки карты */
 
-.footer__content {}
+.loader {
+    position: absolute;
+    z-index: 15;
+    top: -100%;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: #000000;
+    transition: opacity .7s ease;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, .55);
+}
 
-.footer__policy {}
+.loader:after, .loader:before {
+    box-sizing: border-box;
+}
 
-.footer__logo {}
+.loader.is-active {
+    top: 0;
+    opacity: 1;
+}
 
-.logo__link {}
+.loader-default:after {
+    position: absolute;
+    top: calc(50% - 24px);
+    left: calc(50% - 24px);
+    width: 48px;
+    height: 48px;
+    content: '';
+    animation: rotation 1s linear infinite;
+    border: solid 8px #ffffff;
+    border-left-color: transparent;
+    border-radius: 50%;
+}
 
-.footer__title {}
+@keyframes rotation {
+    from {
+        transform: rotate(0);
+    }
 
-.footer__policy-inner {}
+    to {
+        transform: rotate(359deg);
+    }
+}
 
-.footer__link {}
+@keyframes blink {
+    from {
+        opacity: .5;
+    }
 
-.footer__navigation {}
+    to {
+        opacity: 1;
+    }
+}
 
-.footer__navigation-inner {}
+.contacts__box {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 368px;
+    height: 326px;
+    top: 250px;
+    background-color: #F04747;
+    margin: 0px 0px 0px 150px;
+    z-index: 5;
+    justify-content: flex-start;
+}
 
-.footer__menu {}
+.contacts__box-title {
+    color: #FFF;
+    padding: 40px 35px;
+    text-transform: uppercase;
+}
 
-.footer__menu-list {}
+.contacts__list {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 21px;
+    color: #333333;
+    padding-top: 44px;
+}
 
-.footer__menu-list-item {}
+.contacts__list-item {
+    background: url('/img/icons/success.svg') no-repeat center left;
+    padding: 4px 0 4px 25px;
+    list-style: none;
+    margin: 0px 0px 0px 35px;
 
-.footer__menu-link {}
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 131.4%;
+    /* or 26px */
 
-.footer__contacts {}
 
-.footer__button {}
+    color: #FFFFFF;
+}
 
-.button {}
+.contacts__list-item--underline {
+    text-decoration: underline;
+}
 
-.modal__link--black {}
+.footer {
+    background-color: #F04747;
+}
+
+.logo__link {
+    text-decoration: none;
+}
+
+.footer__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 33px;
+    color: #FFFFFF;
+    width: 300px;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: row;
+    margin: 100px 0 0 0;
+    justify-content: space-between;
+    padding-top: 100px;
+}
+
+.footer__logo {
+    margin: 0px 0px 44px 0px;
+}
+
+.footer__policy {
+    max-width: 250px;
+    margin: 0px 0px 100px 0px;
+}
+
+.footer__policy-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__link {
+    text-decoration: none;
+    padding: 0px 0px 36px 0px;
+    color: rgb(255, 255, 255);
+}
+
+.footer__menu-list-item {
+    padding: 0px 0px 15px 0px;
+}
+
+.footer__menu-link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer__menu-link:hover {
+    text-decoration: underline;
+}
+
+.footer__link:hover {
+    text-decoration: underline;
+}
+
+.footer__email {
+    margin: 20px 0px 0px 0px;
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333333;
+}
+
+.footer__contacts {
+    text-align: center;
+}
+
+.footer__button {
+    border: 1px solid #333333;
+    cursor: pointer;
+}
+
+.footer__phone {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333333;
+    text-decoration: underline;
+    padding: 10px 0px 0px 0px;
+}
+
+
+.button {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+    border: 1px solid #FFF;
+    outline: none;
+
+    background-color: #F04747;
+
+}
+
+.modal__link--black {
+    padding: 10px 30px;
+}
+
+/* Modal Window */
+
+.modal__box {
+    width: 491px;
+    background: #FFF;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.modal__container {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.modal__header {
+    width: 100%;
+    background: #F04747;
+    border-radius: 10px 10px 0 0;
+    padding: 3px 0 30px 0px;
+}
+
+.close {
+    display: block;
+    padding: 18px 18px 0 0;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: right;
+    font-weight: 600;
+    color: #FFF;
+}
+
+.modal__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFF;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.modal__body {
+    display: flex;
+    flex-direction: column;
+    margin: 70px 0 0 0;
+}
+
+.modal__form-input {
+    color: rgba(51, 51, 51, 0.7);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+    border: none;
+    border-bottom: 1px solid #333333;
+}
+
+.modal__button {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #F2F2F2;
+    background: #F04747;
+    width: 100%;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    margin: 50px auto;
+}
+
+.modal__button:hover {
+    background: #FF4C43;
+    -moz-box-shadow: 0 0 20px #FF4C43;
+    -webkit-box-shadow: 0 0 20px #FF4C43;
+    box-shadow: 0 0 20px #FF4C43;
+}
+
+#modal__window {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal__link {
+    text-decoration: none;
+    color: #FFF;
+}
+
+#modal__callback {
+    position: relative;
+    background-color: #fefefe;
+    margin: 100px auto;
+    padding: 0;
+    border: 1px solid #888;
+    max-width: 40%;
+    min-width: min-content;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    text-align: center;
+}
+
+#modal__window:target {
+    display: block;
+}
