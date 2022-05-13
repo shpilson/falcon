@@ -106,7 +106,8 @@ var ymap = function () {
             spinner.addClass('is-active');
 
             // Загружаем API Яндекс.Карт
-            loadScript("https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;loadByRequire=1", function () {
+
+            loadScript("https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;loadByRequire=1&z=17", function () {
                 // Как только API Яндекс.Карт загрузились, сразу формируем карту и помещаем в блок с идентификатором &#34;map-yandex&#34;
                 ymaps.load(init);
             });
