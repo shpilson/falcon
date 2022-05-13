@@ -126,7 +126,7 @@
                             <form class="consultation__form">
                                 <input class="consultation__form-input" type="text" placeholder="Ваше имя">
                                 <input class="consultation__form-input" type="text" placeholder="Телефон">
-                                <button class="consultation__button modal__link">
+                                <button class="consultation__button modal__link" type="submit">
                                     Перезвоните мне
                                 </button>
                             </form>
@@ -449,10 +449,11 @@
             </div>
             <div class="modal__container" id="modal_callback">
                 <div class="modal__body">
-                    <input class="modal__form-input" type="text" placeholder="Ваше имя">
-                    <input class="modal__form-input" type="text" placeholder="Телефон">
-                    <input class="modal__form-input" type="text" placeholder="Комментарий (необязательно)">
-                    <button class="modal__button">Отправить заявку</button>
+                    <input class="modal__form-input" type="text" name="client_name" placeholder="Ваше имя">
+                    <input class="modal__form-input" type="text" name="client_phone" placeholder="Телефон">
+                    <input class="modal__form-input" type="text" name="message"
+                        placeholder="Комментарий (необязательно)">
+                    <button class="modal__button" type="submit" id="button">Отправить заявку</button>
                 </div>
             </div>
         </div>
@@ -468,7 +469,33 @@
     <script src="/js/jquery.min.js" defer></script>
     <script src="/js/map.js" defer></script>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
+    <script type="text/javascript">
+        emailjs.init('info@tec-falcon.ru')
+    </script>
+
+    <script type="text/javascript">
+        const btn = document.getElementById('button');
+
+        document.getElementById('modal__box')
+            .addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                btn.value = 'Отправка...';
+
+                const serviceID = 'default_service';
+                const templateID = 'template_mtiuoz6';
+
+                emailjs.sendForm(serviceID, templateID, this)
+                    .then(() => {
+                        btn.value = 'Успешно отправлено';
+                        alert('Заявка отправлена! Скоро мы свяжемся с Вами');
+                    }, (err) => {
+                        btn.value = 'Успешно отправлено';
+                        alert(JSON.stringify(err));
+                    });
+            });
     </script>
 </body>
 
