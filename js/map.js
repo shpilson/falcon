@@ -5,21 +5,22 @@ var check_if_load = false;
 //Необходимые переменные для того, чтобы задать координаты на Яндекс.Карте
 var myMapTemp, myPlacemarkTemp;
 
+
 //Функция создания карты сайта и затем вставки ее в блок с идентификатором &#34;map-yandex&#34;
 function init() {
     var myMapTemp = new ymaps.Map("map-yandex", {
-        center: [55.730138, 37.594238], // координаты центра на карте
+        center: [55.685132, 37.877536], // координаты центра на карте
         zoom: 7, // коэффициент приближения карты
         controls: ['zoomControl', 'fullscreenControl'] // выбираем только те функции, которые необходимы при использовании
     });
-    var myPlacemarkTemp = new ymaps.Placemark([55.730138, 37.594238], {
-        balloonContent: "Москва, Волгоградский проспект 8",
+    var myPlacemarkTemp = new ymaps.Placemark([55.685132, 37.877536], {
+        balloonContent: "Люберцы, Октябрьский проезд 12",
     }, {
         // Опции.
         // Необходимо указать данный тип макета.
         iconLayout: 'default#imageWithContent',
         // Своё изображение иконки метки.
-        iconImageHref: 'img/map-marker.png',
+        iconImageHref: './img/map-marker.png',
         // Размеры метки.
         iconImageSize: [50, 50],
         // Смещение левого верхнего угла иконки относительно

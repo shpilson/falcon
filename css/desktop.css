@@ -746,7 +746,7 @@ body {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    background: url('https://shpilson.github.io/movee/img/map-min.webp') #ffffff no-repeat;
+    background: url('/img/map.jpg') #ffffff no-repeat;
     background-position: center center;
     background-size: cover;
     box-shadow: 0 0 2em 0 rgba(0, 0, 0, .2);
